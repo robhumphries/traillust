@@ -1,0 +1,10 @@
+<?php
+
+$id = get_the_ID();				
+$favourites = wpfp_get_users_favorites();
+
+if(in_array($id, $favourites)) { ?>
+		<img src="<?php bloginfo('template_url') ?>/images/favourite-star-active.svg" alt="favourites" />
+<?php } else { ?>
+    <img src="<?php bloginfo('template_url') ?>/images/favourite-star.svg" alt="favourites" />
+<?php }  ?>
